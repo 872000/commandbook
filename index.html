@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CommandBook — Every command you need, in one place</title>
+<meta name="description" content="A searchable dictionary of real macOS Terminal and Windows PowerShell / CMD commands, plus step-by-step guides and virtual machine walkthroughs. Works fully offline.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>📖 CommandBook</h1>
+    <p class="tagline">Every command you need, in one place. macOS Terminal &amp; Windows PowerShell / CMD — searchable, plain-English, offline.</p>
+    <nav class="top-nav">
+      <a href="#commands">Commands</a>
+      <a href="#guides">Step-by-step guides</a>
+      <a href="#vms">Virtual machines</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="commands" aria-label="Command dictionary">
+    <div class="search-block">
+      <label for="search" class="search-label">Search commands</label>
+      <input id="search" type="search" placeholder="Try: disk space, kill process, wifi password, find files…" autocomplete="off" spellcheck="false">
+      <p class="search-hint">Search matches the command name, description, and tags. Press <kbd>/</kbd> anywhere to jump to search.</p>
+      <div class="filters" role="group" aria-label="Filter by platform">
+        <button class="filter-btn active" data-platform="all" type="button">All platforms</button>
+        <button class="filter-btn" data-platform="macOS" type="button">🍎 macOS</button>
+        <button class="filter-btn" data-platform="Windows" type="button">🪟 Windows</button>
+        <button class="filter-btn" data-platform="Cross-platform" type="button">↔️ Both / Git &amp; SSH</button>
+        <select id="category" aria-label="Filter by category">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+    </div>
+    <div id="command-list" class="command-list"></div>
+    <p id="no-results" class="no-results" hidden>No commands match that search. Try a broader word — for example <button type="button" class="link-btn" data-query="disk">disk</button>, <button type="button" class="link-btn" data-query="network">network</button>, or <button type="button" class="link-btn" data-query="git">git</button>.</p>
+  </section>
+
+  <section id="guides" aria-label="Step-by-step guides">
+    <h2>Step-by-step guides</h2>
+    <p class="section-intro">Common jobs, start to finish. Each guide tells you exactly what to type and what to expect.</p>
+    <div id="guide-list" class="guide-list"></div>
+  </section>
+
+  <section id="vms" aria-label="Virtual machines">
+    <h2>Virtual machines</h2>
+    <p class="section-intro">Run a whole second computer inside your computer. Pick the guide for your machine, check what you need first, then follow the steps. WSL is included as the lightweight alternative to a full VM on Windows.</p>
+    <div id="vm-list" class="guide-list"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>CommandBook — 100% original reference content. Commands were checked against macOS (zsh), Windows PowerShell 5.1 / 7, and CMD. Shells change over time: if a flag stops working, check <code>man &lt;command&gt;</code> on macOS or <code>Get-Help &lt;command&gt;</code> in PowerShell.</p>
+    <p>Open <code>index.html</code> in any browser — no server, no internet, no tracking.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
