@@ -36,6 +36,13 @@ console.log("Command data");
 test("at least 60 command entries", function () {
   assert.ok(COMMANDS.length >= 60, "only " + COMMANDS.length + " entries");
 });
+test("README states the correct command count", function () {
+  var readme = fs.readFileSync(path.join(ROOT, "README.md"), "utf8");
+  var match = readme.match(/Command dictionary[^\n]*?(\d+) entries/);
+  assert.ok(match, "README does not state a command count");
+  assert.strictEqual(Number(match[1]), COMMANDS.length,
+    "README says " + match[1] + " entries but data.js has " + COMMANDS.length);
+});
 test("at least 25 macOS entries", function () {
   var n = COMMANDS.filter(function (c) { return c.platform === "macOS"; }).length;
   assert.ok(n >= 25, "only " + n + " macOS entries");

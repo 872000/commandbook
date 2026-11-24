@@ -4,7 +4,7 @@
 
 ## What is in it
 
-- **Command dictionary** — 79 entries across macOS (Terminal/zsh), Windows (PowerShell and CMD), and cross-platform Git & SSH. Every entry has the command, its syntax, a plain-English description, step-by-step usage, and a real example. Categories: Files & folders, Searching, Networking, Processes, Disk, Users & permissions, Package managers (Homebrew, winget, Chocolatey), Git, SSH, and System info.
+- **Command dictionary** — 80 entries across macOS (Terminal/zsh), Windows (PowerShell and CMD), and cross-platform Git & SSH. Every entry has the command, its syntax, a plain-English description, step-by-step usage, and a real example. Categories: Files & folders, Searching, Networking, Processes, Disk, Users & permissions, Package managers (Homebrew, winget, Chocolatey), Git, SSH, and System info.
 - **Live search** — the search bar at the top filters entries as you type, matching the command name, description, syntax, and tags. Filter by platform (macOS / Windows / Both) and by category. Press `/` anywhere to jump to the search box. Each entry has a Copy button for its syntax.
 - **Step-by-step guides** — 6 guides: set up SSH keys, find what is eating your disk space, kill a stuck process, share files between two machines, find your saved Wi-Fi password, and install/update apps from the terminal.
 - **Virtual machines** — 6 guides: Windows 11 on a Mac with UTM, Windows 11 on a Mac with Parallels, Ubuntu on Windows with VirtualBox, Linux on Windows with Hyper-V, any OS on Windows with VMware Workstation Player, and WSL 2 as the lightweight alternative to a full VM. Each guide lists what you need, the steps, and common gotchas.
